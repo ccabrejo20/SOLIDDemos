@@ -1,0 +1,340 @@
+@startuml
+namespace com.example.dip.demodippizzamanager {
+    namespace factories {
+      class com.example.dip.demodippizzamanager.factories.ChicagoPizzaIngredientFactory {
+          + createCheese()
+          + createClam()
+          + createDough()
+          + createPepperoni()
+          + createSauce()
+          + createVeggies()
+      }
+    }
+  }
+
+
+  namespace com.example.dip.demodippizzamanager {
+    namespace factories {
+      class com.example.dip.demodippizzamanager.factories.NYPizzaIngredientFactory {
+          + createCheese()
+          + createClam()
+          + createDough()
+          + createPepperoni()
+          + createSauce()
+          + createVeggies()
+      }
+    }
+  }
+
+
+  namespace com.example.dip.demodippizzamanager {
+    namespace factories {
+      interface com.example.dip.demodippizzamanager.factories.PizzaIngredientFactory {
+          {abstract} + createCheese()
+          {abstract} + createClam()
+          {abstract} + createDough()
+          {abstract} + createPepperoni()
+          {abstract} + createSauce()
+          {abstract} + createVeggies()
+      }
+    }
+  }
+
+
+  com.example.dip.demodippizzamanager.factories.ChicagoPizzaIngredientFactory .up.|> com.example.dip.demodippizzamanager.factories.PizzaIngredientFactory
+  com.example.dip.demodippizzamanager.factories.NYPizzaIngredientFactory .up.|> com.example.dip.demodippizzamanager.factories.PizzaIngredientFactory
+
+namespace com.example.dip.demodippizzamanager {
+    namespace ingredients {
+      class com.example.dip.demodippizzamanager.ingredients.BlackOlives {
+      }
+    }
+  }
+
+
+  namespace com.example.dip.demodippizzamanager {
+    namespace ingredients {
+      interface com.example.dip.demodippizzamanager.ingredients.Cheese {
+      }
+    }
+  }
+
+
+  namespace com.example.dip.demodippizzamanager {
+    namespace ingredients {
+      interface com.example.dip.demodippizzamanager.ingredients.Clams {
+      }
+    }
+  }
+
+
+  namespace com.example.dip.demodippizzamanager {
+    namespace ingredients {
+      interface com.example.dip.demodippizzamanager.ingredients.Dough {
+      }
+    }
+  }
+
+
+  namespace com.example.dip.demodippizzamanager {
+    namespace ingredients {
+      class com.example.dip.demodippizzamanager.ingredients.Eggplant {
+      }
+    }
+  }
+
+
+  namespace com.example.dip.demodippizzamanager {
+    namespace ingredients {
+      class com.example.dip.demodippizzamanager.ingredients.FreshClams {
+      }
+    }
+  }
+
+
+  namespace com.example.dip.demodippizzamanager {
+    namespace ingredients {
+      class com.example.dip.demodippizzamanager.ingredients.FrozenClams {
+      }
+    }
+  }
+
+
+  namespace com.example.dip.demodippizzamanager {
+    namespace ingredients {
+      class com.example.dip.demodippizzamanager.ingredients.Garlic {
+      }
+    }
+  }
+
+
+  namespace com.example.dip.demodippizzamanager {
+    namespace ingredients {
+      class com.example.dip.demodippizzamanager.ingredients.MarinaraSauce {
+      }
+    }
+  }
+
+
+  namespace com.example.dip.demodippizzamanager {
+    namespace ingredients {
+      class com.example.dip.demodippizzamanager.ingredients.MozzarellaCheese {
+      }
+    }
+  }
+
+
+  namespace com.example.dip.demodippizzamanager {
+    namespace ingredients {
+      class com.example.dip.demodippizzamanager.ingredients.Mushroom {
+      }
+    }
+  }
+
+
+  namespace com.example.dip.demodippizzamanager {
+    namespace ingredients {
+      class com.example.dip.demodippizzamanager.ingredients.Onion {
+      }
+    }
+  }
+
+
+  namespace com.example.dip.demodippizzamanager {
+    namespace ingredients {
+      interface com.example.dip.demodippizzamanager.ingredients.Pepperoni {
+      }
+    }
+  }
+
+
+  namespace com.example.dip.demodippizzamanager {
+    namespace ingredients {
+      class com.example.dip.demodippizzamanager.ingredients.PlumTomatoSauce {
+      }
+    }
+  }
+
+
+  namespace com.example.dip.demodippizzamanager {
+    namespace ingredients {
+      class com.example.dip.demodippizzamanager.ingredients.RedPepper {
+      }
+    }
+  }
+
+
+  namespace com.example.dip.demodippizzamanager {
+    namespace ingredients {
+      class com.example.dip.demodippizzamanager.ingredients.ReggianoCheese {
+      }
+    }
+  }
+
+
+  namespace com.example.dip.demodippizzamanager {
+    namespace ingredients {
+      interface com.example.dip.demodippizzamanager.ingredients.Sauce {
+      }
+    }
+  }
+
+
+  namespace com.example.dip.demodippizzamanager {
+    namespace ingredients {
+      class com.example.dip.demodippizzamanager.ingredients.SlicedPepperoni {
+      }
+    }
+  }
+
+
+  namespace com.example.dip.demodippizzamanager {
+    namespace ingredients {
+      class com.example.dip.demodippizzamanager.ingredients.Spinach {
+      }
+    }
+  }
+
+
+  namespace com.example.dip.demodippizzamanager {
+    namespace ingredients {
+      class com.example.dip.demodippizzamanager.ingredients.ThickCrustDough {
+      }
+    }
+  }
+
+
+  namespace com.example.dip.demodippizzamanager {
+    namespace ingredients {
+      class com.example.dip.demodippizzamanager.ingredients.ThinCrustDough {
+      }
+    }
+  }
+
+
+  namespace com.example.dip.demodippizzamanager {
+    namespace ingredients {
+      interface com.example.dip.demodippizzamanager.ingredients.Veggies {
+      }
+    }
+  }
+
+
+  com.example.dip.demodippizzamanager.ingredients.BlackOlives .up.|> com.example.dip.demodippizzamanager.ingredients.Veggies
+  com.example.dip.demodippizzamanager.ingredients.Eggplant .up.|> com.example.dip.demodippizzamanager.ingredients.Veggies
+  com.example.dip.demodippizzamanager.ingredients.FreshClams .up.|> com.example.dip.demodippizzamanager.ingredients.Clams
+  com.example.dip.demodippizzamanager.ingredients.FrozenClams .up.|> com.example.dip.demodippizzamanager.ingredients.Clams
+  com.example.dip.demodippizzamanager.ingredients.Garlic .up.|> com.example.dip.demodippizzamanager.ingredients.Veggies
+  com.example.dip.demodippizzamanager.ingredients.MarinaraSauce .up.|> com.example.dip.demodippizzamanager.ingredients.Sauce
+  com.example.dip.demodippizzamanager.ingredients.MozzarellaCheese .up.|> com.example.dip.demodippizzamanager.ingredients.Cheese
+  com.example.dip.demodippizzamanager.ingredients.Mushroom .up.|> com.example.dip.demodippizzamanager.ingredients.Veggies
+  com.example.dip.demodippizzamanager.ingredients.Onion .up.|> com.example.dip.demodippizzamanager.ingredients.Veggies
+  com.example.dip.demodippizzamanager.ingredients.PlumTomatoSauce .up.|> com.example.dip.demodippizzamanager.ingredients.Sauce
+  com.example.dip.demodippizzamanager.ingredients.RedPepper .up.|> com.example.dip.demodippizzamanager.ingredients.Veggies
+  com.example.dip.demodippizzamanager.ingredients.ReggianoCheese .up.|> com.example.dip.demodippizzamanager.ingredients.Cheese
+  com.example.dip.demodippizzamanager.ingredients.SlicedPepperoni .up.|> com.example.dip.demodippizzamanager.ingredients.Pepperoni
+  com.example.dip.demodippizzamanager.ingredients.Spinach .up.|> com.example.dip.demodippizzamanager.ingredients.Veggies
+  com.example.dip.demodippizzamanager.ingredients.ThickCrustDough .up.|> com.example.dip.demodippizzamanager.ingredients.Dough
+  com.example.dip.demodippizzamanager.ingredients.ThinCrustDough .up.|> com.example.dip.demodippizzamanager.ingredients.Dough
+
+ namespace com.example.dip.demodippizzamanager {
+    namespace pizzas {
+      class com.example.dip.demodippizzamanager.pizzas.CheesePizza {
+          + CheesePizza()
+          + prepare()
+      }
+    }
+  }
+
+
+  namespace com.example.dip.demodippizzamanager {
+    namespace pizzas {
+      class com.example.dip.demodippizzamanager.pizzas.ClamPizza {
+          + ClamPizza()
+          + prepare()
+      }
+    }
+  }
+
+
+  namespace com.example.dip.demodippizzamanager {
+    namespace pizzas {
+      class com.example.dip.demodippizzamanager.pizzas.PepperoniPizza {
+          + PepperoniPizza()
+          + prepare()
+      }
+    }
+  }
+
+
+  namespace com.example.dip.demodippizzamanager {
+    namespace pizzas {
+      abstract class com.example.dip.demodippizzamanager.pizzas.Pizza {
+          ~ name : String
+          ~ veggies : Veggies[]
+          + bake()
+          + box()
+          + cut()
+          + getName()
+          {abstract} + prepare()
+          + setName()
+      }
+    }
+  }
+
+
+  namespace com.example.dip.demodippizzamanager {
+    namespace pizzas {
+      class com.example.dip.demodippizzamanager.pizzas.VeggiePizza {
+          + VeggiePizza()
+          + prepare()
+      }
+    }
+  }
+
+
+  com.example.dip.demodippizzamanager.pizzas.CheesePizza -up-|> com.example.dip.demodippizzamanager.pizzas.Pizza
+  com.example.dip.demodippizzamanager.pizzas.CheesePizza o-- com.example.dip.demodippizzamanager.factories.PizzaIngredientFactory : ingredientFactory
+  com.example.dip.demodippizzamanager.pizzas.ClamPizza -up-|> com.example.dip.demodippizzamanager.pizzas.Pizza
+  com.example.dip.demodippizzamanager.pizzas.ClamPizza o-- com.example.dip.demodippizzamanager.factories.PizzaIngredientFactory : ingredientFactory
+  com.example.dip.demodippizzamanager.pizzas.PepperoniPizza -up-|> com.example.dip.demodippizzamanager.pizzas.Pizza
+  com.example.dip.demodippizzamanager.pizzas.PepperoniPizza o-- com.example.dip.demodippizzamanager.factories.PizzaIngredientFactory : ingredientFactory
+  com.example.dip.demodippizzamanager.pizzas.Pizza o-- com.example.dip.demodippizzamanager.ingredients.Cheese : cheese
+  com.example.dip.demodippizzamanager.pizzas.Pizza o-- com.example.dip.demodippizzamanager.ingredients.Clams : clam
+  com.example.dip.demodippizzamanager.pizzas.Pizza o-- com.example.dip.demodippizzamanager.ingredients.Dough : dough
+  com.example.dip.demodippizzamanager.pizzas.Pizza o-- com.example.dip.demodippizzamanager.ingredients.Pepperoni : pepperoni
+  com.example.dip.demodippizzamanager.pizzas.Pizza o-- com.example.dip.demodippizzamanager.ingredients.Sauce : sauce
+  com.example.dip.demodippizzamanager.pizzas.Pizza o-- com.example.dip.demodippizzamanager.ingredients.Veggies : veggies
+  com.example.dip.demodippizzamanager.pizzas.VeggiePizza -up-|> com.example.dip.demodippizzamanager.pizzas.Pizza
+  com.example.dip.demodippizzamanager.pizzas.VeggiePizza o-- com.example.dip.demodippizzamanager.factories.PizzaIngredientFactory : ingredientFactory
+namespace com.example.dip.demodippizzamanager {
+    namespace stores {
+      class com.example.dip.demodippizzamanager.stores.ChicagoPizzaStore {
+          # createPizza()
+      }
+    }
+  }
+
+
+  namespace com.example.dip.demodippizzamanager {
+    namespace stores {
+      class com.example.dip.demodippizzamanager.stores.NYPizzaStore {
+          # createPizza()
+      }
+    }
+  }
+
+
+  namespace com.example.dip.demodippizzamanager {
+    namespace stores {
+      abstract class com.example.dip.demodippizzamanager.stores.PizzaStore {
+          + orderPizza()
+          {abstract} # createPizza()
+      }
+    }
+  }
+
+
+  com.example.dip.demodippizzamanager.stores.ChicagoPizzaStore -up-|> com.example.dip.demodippizzamanager.stores.PizzaStore
+  com.example.dip.demodippizzamanager.stores.NYPizzaStore -up-|> com.example.dip.demodippizzamanager.stores.PizzaStore
+@enduml

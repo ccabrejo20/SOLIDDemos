@@ -1,0 +1,198 @@
+@startuml
+
+title __RESOURCE's Class Diagram__\n
+
+  namespace  {
+    namespace om.example.srp.demoSRPGameManager {
+      namespace resource {
+        class com.example.srp.demosrpgamemanager.resource.ActionRequest {
+            + ActionRequest()
+            + ActionRequest()
+            {static} + builder()
+            + equals()
+            + getPlayer()
+            + hashCode()
+            + setPlayer()
+            + toString()
+            # canEqual()
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace om.example.srp.demoSRPGameManager {
+      namespace resource {
+        class com.example.srp.demosrpgamemanager.resource.ActionRequest.ActionRequestBuilder {
+            + build()
+            + player()
+            + toString()
+            ~ ActionRequestBuilder()
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace om.example.srp.demoSRPGameManager {
+      namespace resource {
+        class com.example.srp.demosrpgamemanager.resource.ActionResponse {
+            + ActionResponse()
+            + equals()
+            + getPlayer()
+            + hashCode()
+            + setPlayer()
+            + toString()
+            # canEqual()
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace om.example.srp.demoSRPGameManager {
+      namespace resource {
+        class com.example.srp.demosrpgamemanager.resource.PlayerRequest {
+            + PlayerRequest()
+            + PlayerRequest()
+            {static} + builder()
+            + equals()
+            + getPlayer()
+            + hashCode()
+            + setPlayer()
+            + toString()
+            # canEqual()
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace om.example.srp.demoSRPGameManager {
+      namespace resource {
+        class com.example.srp.demosrpgamemanager.resource.PlayerRequest.PlayerRequestBuilder {
+            + build()
+            + player()
+            + toString()
+            ~ PlayerRequestBuilder()
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace om.example.srp.demoSRPGameManager {
+      namespace resource {
+        class com.example.srp.demosrpgamemanager.resource.PlayerResponse {
+            - highScore : long
+            - name : String
+            + PlayerResponse()
+            {static} + builder()
+            + equals()
+            + getHighScore()
+            + getName()
+            + hashCode()
+            + setHighScore()
+            + setName()
+            + toString()
+            # canEqual()
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace om.example.srp.demoSRPGameManager {
+      namespace resource {
+        class com.example.srp.demosrpgamemanager.resource.PlayerResponse.PlayerResponseBuilder {
+            - highScore : long
+            - name : String
+            + build()
+            + highScore()
+            + name()
+            + toString()
+            ~ PlayerResponseBuilder()
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace om.example.srp.demoSRPGameManager {
+      namespace resource {
+        class com.example.srp.demosrpgamemanager.resource.SessionRequest {
+            + SessionRequest()
+            + SessionRequest()
+            {static} + builder()
+            + equals()
+            + getPlayer()
+            + hashCode()
+            + setPlayer()
+            + toString()
+            # canEqual()
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace om.example.srp.demoSRPGameManager {
+      namespace resource {
+        class com.example.srp.demosrpgamemanager.resource.SessionRequest.SessionRequestBuilder {
+            + build()
+            + player()
+            + toString()
+            ~ SessionRequestBuilder()
+        }
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace om.example.srp.demoSRPGameManager {
+      namespace resource {
+        class com.example.srp.demosrpgamemanager.resource.SessionResponse {
+            + SessionResponse()
+            + equals()
+            + getPlayer()
+            + hashCode()
+            + setPlayer()
+            + toString()
+            # canEqual()
+        }
+      }
+    }
+  }
+  
+
+  com.example.srp.demosrpgamemanager.resource.ActionRequest o-- com.example.srp.demosrpgamemanager.model.Player : player
+  com.example.srp.demosrpgamemanager.resource.ActionRequest +-down- com.example.srp.demosrpgamemanager.resource.ActionRequest.ActionRequestBuilder
+  com.example.srp.demosrpgamemanager.resource.ActionRequest.ActionRequestBuilder o-- com.example.srp.demosrpgamemanager.model.Player : player
+  com.example.srp.demosrpgamemanager.resource.ActionResponse o-- com.example.srp.demosrpgamemanager.model.Player : player
+  com.example.srp.demosrpgamemanager.resource.PlayerRequest o-- com.example.srp.demosrpgamemanager.model.Player : player
+  com.example.srp.demosrpgamemanager.resource.PlayerRequest +-down- com.example.srp.demosrpgamemanager.resource.PlayerRequest.PlayerRequestBuilder
+  com.example.srp.demosrpgamemanager.resource.PlayerRequest.PlayerRequestBuilder o-- com.example.srp.demosrpgamemanager.model.Player : player
+  com.example.srp.demosrpgamemanager.resource.PlayerResponse +-down- com.example.srp.demosrpgamemanager.resource.PlayerResponse.PlayerResponseBuilder
+  com.example.srp.demosrpgamemanager.resource.SessionRequest o-- com.example.srp.demosrpgamemanager.model.Player : player
+  com.example.srp.demosrpgamemanager.resource.SessionRequest +-down- com.example.srp.demosrpgamemanager.resource.SessionRequest.SessionRequestBuilder
+  com.example.srp.demosrpgamemanager.resource.SessionRequest.SessionRequestBuilder o-- com.example.srp.demosrpgamemanager.model.Player : player
+  com.example.srp.demosrpgamemanager.resource.SessionResponse o-- com.example.srp.demosrpgamemanager.model.Player : player
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

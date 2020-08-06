@@ -1,0 +1,206 @@
+@startuml
+
+title __INGREDIENTS's Class Diagram__\n
+
+  namespace com.example.dip.demodippizzamanager {
+    namespace ingredients {
+      class com.example.dip.demodippizzamanager.ingredients.BlackOlives {
+      }
+    }
+  }
+  
+
+  namespace com.example.dip.demodippizzamanager {
+    namespace ingredients {
+      interface com.example.dip.demodippizzamanager.ingredients.Cheese {
+      }
+    }
+  }
+  
+
+  namespace com.example.dip.demodippizzamanager {
+    namespace ingredients {
+      interface com.example.dip.demodippizzamanager.ingredients.Clams {
+      }
+    }
+  }
+  
+
+  namespace com.example.dip.demodippizzamanager {
+    namespace ingredients {
+      interface com.example.dip.demodippizzamanager.ingredients.Dough {
+      }
+    }
+  }
+  
+
+  namespace com.example.dip.demodippizzamanager {
+    namespace ingredients {
+      class com.example.dip.demodippizzamanager.ingredients.Eggplant {
+      }
+    }
+  }
+  
+
+  namespace com.example.dip.demodippizzamanager {
+    namespace ingredients {
+      class com.example.dip.demodippizzamanager.ingredients.FreshClams {
+      }
+    }
+  }
+  
+
+  namespace com.example.dip.demodippizzamanager {
+    namespace ingredients {
+      class com.example.dip.demodippizzamanager.ingredients.FrozenClams {
+      }
+    }
+  }
+  
+
+  namespace com.example.dip.demodippizzamanager {
+    namespace ingredients {
+      class com.example.dip.demodippizzamanager.ingredients.Garlic {
+      }
+    }
+  }
+  
+
+  namespace com.example.dip.demodippizzamanager {
+    namespace ingredients {
+      class com.example.dip.demodippizzamanager.ingredients.MarinaraSauce {
+      }
+    }
+  }
+  
+
+  namespace com.example.dip.demodippizzamanager {
+    namespace ingredients {
+      class com.example.dip.demodippizzamanager.ingredients.MozzarellaCheese {
+      }
+    }
+  }
+  
+
+  namespace com.example.dip.demodippizzamanager {
+    namespace ingredients {
+      class com.example.dip.demodippizzamanager.ingredients.Mushroom {
+      }
+    }
+  }
+  
+
+  namespace com.example.dip.demodippizzamanager {
+    namespace ingredients {
+      class com.example.dip.demodippizzamanager.ingredients.Onion {
+      }
+    }
+  }
+  
+
+  namespace com.example.dip.demodippizzamanager {
+    namespace ingredients {
+      interface com.example.dip.demodippizzamanager.ingredients.Pepperoni {
+      }
+    }
+  }
+  
+
+  namespace com.example.dip.demodippizzamanager {
+    namespace ingredients {
+      class com.example.dip.demodippizzamanager.ingredients.PlumTomatoSauce {
+      }
+    }
+  }
+  
+
+  namespace com.example.dip.demodippizzamanager {
+    namespace ingredients {
+      class com.example.dip.demodippizzamanager.ingredients.RedPepper {
+      }
+    }
+  }
+  
+
+  namespace com.example.dip.demodippizzamanager {
+    namespace ingredients {
+      class com.example.dip.demodippizzamanager.ingredients.ReggianoCheese {
+      }
+    }
+  }
+  
+
+  namespace com.example.dip.demodippizzamanager {
+    namespace ingredients {
+      interface com.example.dip.demodippizzamanager.ingredients.Sauce {
+      }
+    }
+  }
+  
+
+  namespace com.example.dip.demodippizzamanager {
+    namespace ingredients {
+      class com.example.dip.demodippizzamanager.ingredients.SlicedPepperoni {
+      }
+    }
+  }
+  
+
+  namespace com.example.dip.demodippizzamanager {
+    namespace ingredients {
+      class com.example.dip.demodippizzamanager.ingredients.Spinach {
+      }
+    }
+  }
+  
+
+  namespace com.example.dip.demodippizzamanager {
+    namespace ingredients {
+      class com.example.dip.demodippizzamanager.ingredients.ThickCrustDough {
+      }
+    }
+  }
+  
+
+  namespace com.example.dip.demodippizzamanager {
+    namespace ingredients {
+      class com.example.dip.demodippizzamanager.ingredients.ThinCrustDough {
+      }
+    }
+  }
+  
+
+  namespace com.example.dip.demodippizzamanager {
+    namespace ingredients {
+      interface com.example.dip.demodippizzamanager.ingredients.Veggies {
+      }
+    }
+  }
+  
+
+  com.example.dip.demodippizzamanager.ingredients.BlackOlives .up.|> com.example.dip.demodippizzamanager.ingredients.Veggies
+  com.example.dip.demodippizzamanager.ingredients.Eggplant .up.|> com.example.dip.demodippizzamanager.ingredients.Veggies
+  com.example.dip.demodippizzamanager.ingredients.FreshClams .up.|> com.example.dip.demodippizzamanager.ingredients.Clams
+  com.example.dip.demodippizzamanager.ingredients.FrozenClams .up.|> com.example.dip.demodippizzamanager.ingredients.Clams
+  com.example.dip.demodippizzamanager.ingredients.Garlic .up.|> com.example.dip.demodippizzamanager.ingredients.Veggies
+  com.example.dip.demodippizzamanager.ingredients.MarinaraSauce .up.|> com.example.dip.demodippizzamanager.ingredients.Sauce
+  com.example.dip.demodippizzamanager.ingredients.MozzarellaCheese .up.|> com.example.dip.demodippizzamanager.ingredients.Cheese
+  com.example.dip.demodippizzamanager.ingredients.Mushroom .up.|> com.example.dip.demodippizzamanager.ingredients.Veggies
+  com.example.dip.demodippizzamanager.ingredients.Onion .up.|> com.example.dip.demodippizzamanager.ingredients.Veggies
+  com.example.dip.demodippizzamanager.ingredients.PlumTomatoSauce .up.|> com.example.dip.demodippizzamanager.ingredients.Sauce
+  com.example.dip.demodippizzamanager.ingredients.RedPepper .up.|> com.example.dip.demodippizzamanager.ingredients.Veggies
+  com.example.dip.demodippizzamanager.ingredients.ReggianoCheese .up.|> com.example.dip.demodippizzamanager.ingredients.Cheese
+  com.example.dip.demodippizzamanager.ingredients.SlicedPepperoni .up.|> com.example.dip.demodippizzamanager.ingredients.Pepperoni
+  com.example.dip.demodippizzamanager.ingredients.Spinach .up.|> com.example.dip.demodippizzamanager.ingredients.Veggies
+  com.example.dip.demodippizzamanager.ingredients.ThickCrustDough .up.|> com.example.dip.demodippizzamanager.ingredients.Dough
+  com.example.dip.demodippizzamanager.ingredients.ThinCrustDough .up.|> com.example.dip.demodippizzamanager.ingredients.Dough
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml
