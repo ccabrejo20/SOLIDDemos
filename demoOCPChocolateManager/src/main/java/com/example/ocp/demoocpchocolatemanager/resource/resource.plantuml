@@ -2,8 +2,8 @@
 
 title __RESOURCE's Class Diagram__\n
 
-  namespace  {
-    namespace om.example.ocp.demoOCPChocolateManager {
+
+    namespace om.example.ocp.demoocpchocolatemanager {
       namespace resource {
         class com.example.ocp.demoocpchocolatemanager.resource.ChocolateRequest {
             + ChocolateRequest()
@@ -20,11 +20,11 @@ title __RESOURCE's Class Diagram__\n
         }
       }
     }
-  }
+
   
 
-  namespace  {
-    namespace om.example.ocp.demoOCPChocolateManager {
+
+    namespace om.example.ocp.demoocpchocolatemanager {
       namespace resource {
         class com.example.ocp.demoocpchocolatemanager.resource.ChocolateRequest.ChocolateRequestBuilder {
             + build()
@@ -35,11 +35,11 @@ title __RESOURCE's Class Diagram__\n
         }
       }
     }
-  }
+
   
 
-  namespace  {
-    namespace om.example.ocp.demoOCPChocolateManager {
+
+    namespace om.example.ocp.demoocpchocolatemanager {
       namespace resource {
         class com.example.ocp.demoocpchocolatemanager.resource.ChocolateResponse {
             + ChocolateResponse()
@@ -52,7 +52,7 @@ title __RESOURCE's Class Diagram__\n
         }
       }
     }
-  }
+
   
 
   com.example.ocp.demoocpchocolatemanager.resource.ChocolateRequest o-- com.example.ocp.demoocpchocolatemanager.model.ChocolateCategory : chocolateCategory

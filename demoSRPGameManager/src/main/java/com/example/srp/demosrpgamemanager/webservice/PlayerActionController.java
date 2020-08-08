@@ -1,6 +1,8 @@
 package com.example.srp.demosrpgamemanager.webservice;
 
-import com.example.srp.demosrpgamemanager.manager.PlayerActionManager;
+import com.example.srp.demosrpgamemanager.manager.action.FireManager;
+import com.example.srp.demosrpgamemanager.manager.action.MoveManager;
+import com.example.srp.demosrpgamemanager.manager.action.RestManager;
 import com.example.srp.demosrpgamemanager.model.Player;
 import com.example.srp.demosrpgamemanager.resource.ActionRequest;
 import com.example.srp.demosrpgamemanager.resource.ActionResponse;
@@ -17,7 +19,13 @@ import org.springframework.web.bind.annotation.RestController;
 public class PlayerActionController {
 
     @Autowired
-    private PlayerActionManager playerActionManager;
+    private MoveManager moveManager;
+
+    @Autowired
+    private FireManager fireManager;
+
+    @Autowired
+    private RestManager restManager;
 
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Successful response", response = SessionResponse.class)
@@ -26,7 +34,7 @@ public class PlayerActionController {
     public ActionResponse move(@RequestBody ActionRequest actionRequest) {
 
         Player player = actionRequest.getPlayer();
-        playerActionManager.move(player);
+        moveManager.move(player);
         return new ActionResponse(player);
     }
 
@@ -36,7 +44,7 @@ public class PlayerActionController {
     @PostMapping(value = "/fire", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
     public ActionResponse fire(@RequestBody ActionRequest actionRequest) {
         Player player = actionRequest.getPlayer();
-        playerActionManager.fire(player);
+        fireManager.fire(player);
         return new ActionResponse(player);
     }
 
@@ -46,7 +54,7 @@ public class PlayerActionController {
     @PostMapping(value = "/rest", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
     public ActionResponse rest(@RequestBody ActionRequest actionRequest) {
         Player player = actionRequest.getPlayer();
-        playerActionManager.rest(player);
+        restManager.rest(player);
         return new ActionResponse(player);
     }
 

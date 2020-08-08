@@ -2,8 +2,8 @@
 
 title __MANAGER's Class Diagram__\n
 
-  namespace  {
-    namespace om.example.ocp.demoOCPChocolateManager {
+
+    namespace om.example.ocp.demoocpchocolatemanager {
       namespace manager {
         class com.example.ocp.demoocpchocolatemanager.manager.ChocolateManager {
             {static} - SERVICE_NAME_SUFFIX : String
@@ -12,7 +12,7 @@ title __MANAGER's Class Diagram__\n
         }
       }
     }
-  }
+
   
 
   com.example.ocp.demoocpchocolatemanager.manager.ChocolateManager o-- com.example.ocp.demoocpchocolatemanager.machine.ChocolateMachine : chocolateMachine

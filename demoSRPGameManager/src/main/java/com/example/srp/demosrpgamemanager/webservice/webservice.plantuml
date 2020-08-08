@@ -3,7 +3,7 @@
 title __WEBSERVICE's Class Diagram__\n
 
   namespace  {
-    namespace om.example.srp.demoSRPGameManager {
+    namespace om.example.srp.demosrpgamemanager {
       namespace webservice {
         class com.example.srp.demosrpgamemanager.webservice.GameSessionController {
             + login()
@@ -15,7 +15,7 @@ title __WEBSERVICE's Class Diagram__\n
   
 
   namespace  {
-    namespace om.example.srp.demoSRPGameManager {
+    namespace om.example.srp.demosrpgamemanager {
       namespace webservice {
         class com.example.srp.demosrpgamemanager.webservice.PlayerActionController {
             + fire()
@@ -28,7 +28,7 @@ title __WEBSERVICE's Class Diagram__\n
   
 
   namespace  {
-    namespace om.example.srp.demoSRPGameManager {
+    namespace om.example.srp.demosrpgamemanager {
       namespace webservice {
         class com.example.srp.demosrpgamemanager.webservice.PlayerController {
             + getHighScore()
@@ -39,9 +39,13 @@ title __WEBSERVICE's Class Diagram__\n
   }
   
 
-  com.example.srp.demosrpgamemanager.webservice.GameSessionController o-- com.example.srp.demosrpgamemanager.manager.GameSessionManager : gameSessionManager
-  com.example.srp.demosrpgamemanager.webservice.PlayerActionController o-- com.example.srp.demosrpgamemanager.manager.PlayerActionManager : playerActionManager
-  com.example.srp.demosrpgamemanager.webservice.PlayerController o-- com.example.srp.demosrpgamemanager.manager.PlayerManager : playerManager
+  com.example.srp.demosrpgamemanager.webservice.GameSessionController o-- com.example.srp.demosrpgamemanager.manager.session.LoginManager : loginManager
+  com.example.srp.demosrpgamemanager.webservice.GameSessionController o-- com.example.srp.demosrpgamemanager.manager.session.SignUpManager : signUpManager
+  com.example.srp.demosrpgamemanager.webservice.PlayerActionController o-- com.example.srp.demosrpgamemanager.manager.action.FireManager : fireManager
+  com.example.srp.demosrpgamemanager.webservice.PlayerActionController o-- com.example.srp.demosrpgamemanager.manager.action.MoveManager : moveManager
+  com.example.srp.demosrpgamemanager.webservice.PlayerActionController o-- com.example.srp.demosrpgamemanager.manager.action.RestManager : restManager
+  com.example.srp.demosrpgamemanager.webservice.PlayerController o-- com.example.srp.demosrpgamemanager.manager.player.NameManager : nameManager
+  com.example.srp.demosrpgamemanager.webservice.PlayerController o-- com.example.srp.demosrpgamemanager.manager.player.ScoreManager : scoreManager
 
 
 right footer

@@ -1,24 +1,12 @@
 @startuml
+
 title __DEMOSRPGAMEMANAGER's Class Diagram__\n
 
 
-    class MavenWrapperDownloader {
-    }
-
-
-
-
-    namespace om.example.srp.demoSRPGameManager {
-      class com.example.srp.demoSRPGameManager.DemoSRPGameManagerApplication {
-      }
-    }
-
-
-
-
-    namespace om.example.srp.demoSRPGameManager {
-      namespace config {
-        class com.example.srp.demoSRPGameManager.config.SwaggerConfigurator {
+    namespace om.example.srp.demosrpgamemanager {
+      namespace manager.action {
+        class com.example.srp.demosrpgamemanager.manager.action.FireManager {
+            + fire()
         }
       }
     }
@@ -26,9 +14,10 @@ title __DEMOSRPGAMEMANAGER's Class Diagram__\n
 
 
 
-    namespace om.example.srp.demoSRPGameManager {
-      namespace manager {
-        class com.example.srp.demoSRPGameManager.manager.GameSessionManager {
+    namespace om.example.srp.demosrpgamemanager {
+      namespace manager.action {
+        class com.example.srp.demosrpgamemanager.manager.action.MoveManager {
+            + move()
         }
       }
     }
@@ -36,55 +25,20 @@ title __DEMOSRPGAMEMANAGER's Class Diagram__\n
 
 
 
-    namespace om.example.srp.demoSRPGameManager {
-      namespace manager {
-        class com.example.srp.demoSRPGameManager.manager.PlayerActionManager {
+    namespace om.example.srp.demosrpgamemanager {
+      namespace manager.action {
+        class com.example.srp.demosrpgamemanager.manager.action.RestManager {
+            + rest()
         }
       }
     }
 
 
 
-
-    namespace om.example.srp.demoSRPGameManager {
-      namespace manager {
-        class com.example.srp.demoSRPGameManager.manager.PlayerManager {
-        }
-      }
-    }
-
-
-
-
-    namespace om.example.srp.demoSRPGameManager {
-      namespace model {
-        class com.example.srp.demoSRPGameManager.model.ActionPlayer {
-- action : String
-+ getAction()
-            + setAction()
-        }
-      }
-    }
-
-
-
-
-    namespace om.example.srp.demoSRPGameManager {
-      namespace model {
-        class com.example.srp.demoSRPGameManager.model.Player {
-               - highScore : long
-            - id : String
-            - name : String
-+ getActionPlayer()
-            + getHighScore()
-            + getId()
+    namespace om.example.srp.demosrpgamemanager {
+      namespace manager.player {
+        class com.example.srp.demosrpgamemanager.manager.player.NameManager {
             + getName()
-            + getSessionPlayer()
-            + setActionPlayer()
-            + setHighScore()
-            + setId()
-            + setName()
-            + setSessionPlayer()
         }
       }
     }
@@ -92,12 +46,19 @@ title __DEMOSRPGAMEMANAGER's Class Diagram__\n
 
 
 
-    namespace om.example.srp.demoSRPGameManager {
-      namespace model {
-        class com.example.srp.demoSRPGameManager.model.SessionPlayer {
-- sessionId : String
-+ getSessionId()
-+ setSessionId()
+    namespace om.example.srp.demosrpgamemanager {
+      namespace manager.player {
+        class com.example.srp.demosrpgamemanager.manager.player.ScoreManager {
+            + getHighScore()
+        }
+      }
+    }
+
+
+    namespace om.example.srp.demosrpgamemanager {
+      namespace manager.session {
+        class com.example.srp.demosrpgamemanager.manager.session.LoginManager {
+            + login()
         }
       }
     }
@@ -105,70 +66,9 @@ title __DEMOSRPGAMEMANAGER's Class Diagram__\n
 
 
 
-    namespace om.example.srp.demoSRPGameManager {
-      namespace resource {
-        class com.example.srp.demoSRPGameManager.resource.ActionRequest {
-        }
-      }
-    }
-
-
-
-
-    namespace om.example.srp.demoSRPGameManager {
-      namespace resource {
-        class com.example.srp.demoSRPGameManager.resource.ActionResponse {
-        }
-      }
-    }
-
-
-
-
-    namespace om.example.srp.demoSRPGameManager {
-      namespace resource {
-        class com.example.srp.demoSRPGameManager.resource.PlayerRequest {
-        }
-      }
-    }
-
-
-
-
-    namespace om.example.srp.demoSRPGameManager {
-      namespace resource {
-        class com.example.srp.demoSRPGameManager.resource.PlayerResponse {
-        }
-      }
-    }
-
-
-
-
-    namespace om.example.srp.demoSRPGameManager {
-      namespace resource {
-        class com.example.srp.demoSRPGameManager.resource.SessionRequest {
-        }
-      }
-    }
-
-
-
-
-    namespace om.example.srp.demoSRPGameManager {
-      namespace resource {
-        class com.example.srp.demoSRPGameManager.resource.SessionResponse {
-        }
-      }
-    }
-
-
-
-
-    namespace om.example.srp.demoSRPGameManager {
-      namespace webservice {
-        class com.example.srp.demoSRPGameManager.webservice.GameSessionController {
-             + login()
+    namespace om.example.srp.demosrpgamemanager {
+      namespace manager.session {
+        class com.example.srp.demosrpgamemanager.manager.session.SignUpManager {
             + signUp()
         }
       }
@@ -177,10 +77,227 @@ title __DEMOSRPGAMEMANAGER's Class Diagram__\n
 
 
 
-    namespace om.example.srp.demoSRPGameManager {
+
+    namespace om.example.srp.demosrpgamemanager {
+      namespace model {
+        class com.example.srp.demosrpgamemanager.model.ActionPlayer {
+            - action : String
+            + ActionPlayer()
+            + ActionPlayer()
+            + equals()
+            + getAction()
+            + hashCode()
+            + setAction()
+            + toString()
+            # canEqual()
+        }
+      }
+    }
+
+
+
+
+    namespace om.example.srp.demosrpgamemanager {
+      namespace model {
+        class com.example.srp.demosrpgamemanager.model.Player {
+            - highScore : long
+            - id : String
+            - name : String
+            + Player()
+            + Player()
+            + equals()
+            + getActionPlayer()
+            + getHighScore()
+            + getId()
+            + getName()
+            + getSessionPlayer()
+            + hashCode()
+            + setActionPlayer()
+            + setHighScore()
+            + setId()
+            + setName()
+            + setSessionPlayer()
+            + toString()
+            # canEqual()
+        }
+      }
+    }
+
+
+
+
+
+
+
+    namespace om.example.srp.demosrpgamemanager {
+      namespace model {
+        class com.example.srp.demosrpgamemanager.model.SessionPlayer {
+            - sessionId : String
+            + SessionPlayer()
+            + SessionPlayer()
+            + equals()
+            + getSessionId()
+            + hashCode()
+            + setSessionId()
+            + toString()
+            # canEqual()
+        }
+      }
+    }
+
+
+
+  com.example.srp.demosrpgamemanager.model.Player o-- com.example.srp.demosrpgamemanager.model.ActionPlayer : actionPlayer
+  com.example.srp.demosrpgamemanager.model.Player o-- com.example.srp.demosrpgamemanager.model.SessionPlayer : sessionPlayer
+
+    namespace om.example.srp.demosrpgamemanager {
+      namespace resource {
+        class com.example.srp.demosrpgamemanager.resource.ActionRequest {
+            + ActionRequest()
+            + ActionRequest()
+            + equals()
+            + getPlayer()
+            + hashCode()
+            + setPlayer()
+            + toString()
+            # canEqual()
+        }
+      }
+    }
+
+
+
+
+
+
+
+
+
+    namespace om.example.srp.demosrpgamemanager {
+      namespace resource {
+        class com.example.srp.demosrpgamemanager.resource.ActionResponse {
+            + ActionResponse()
+            + equals()
+            + getPlayer()
+            + hashCode()
+            + setPlayer()
+            + toString()
+            # canEqual()
+        }
+      }
+    }
+
+
+
+
+    namespace om.example.srp.demosrpgamemanager {
+      namespace resource {
+        class com.example.srp.demosrpgamemanager.resource.PlayerRequest {
+            + PlayerRequest()
+            + PlayerRequest()
+            + equals()
+            + getPlayer()
+            + hashCode()
+            + setPlayer()
+            + toString()
+            # canEqual()
+        }
+      }
+    }
+
+
+
+
+
+
+
+
+    namespace om.example.srp.demosrpgamemanager {
+      namespace resource {
+        class com.example.srp.demosrpgamemanager.resource.PlayerResponse {
+            - highScore : long
+            - name : String
+            + PlayerResponse()
+            + equals()
+            + getHighScore()
+            + getName()
+            + hashCode()
+            + setHighScore()
+            + setName()
+            + toString()
+            # canEqual()
+        }
+      }
+    }
+
+
+
+
+
+
+
+
+
+    namespace om.example.srp.demosrpgamemanager {
+      namespace resource {
+        class com.example.srp.demosrpgamemanager.resource.SessionRequest {
+            + SessionRequest()
+            + SessionRequest()
+            + equals()
+            + getPlayer()
+            + hashCode()
+            + setPlayer()
+            + toString()
+            # canEqual()
+        }
+      }
+    }
+
+
+
+
+
+
+
+    namespace om.example.srp.demosrpgamemanager {
+      namespace resource {
+        class com.example.srp.demosrpgamemanager.resource.SessionResponse {
+            + SessionResponse()
+            + equals()
+            + getPlayer()
+            + hashCode()
+            + setPlayer()
+            + toString()
+            # canEqual()
+        }
+      }
+    }
+
+
+
+  com.example.srp.demosrpgamemanager.resource.ActionRequest o-- com.example.srp.demosrpgamemanager.model.Player : player
+  com.example.srp.demosrpgamemanager.resource.ActionResponse o-- com.example.srp.demosrpgamemanager.model.Player : player
+  com.example.srp.demosrpgamemanager.resource.PlayerRequest o-- com.example.srp.demosrpgamemanager.model.Player : player
+  com.example.srp.demosrpgamemanager.resource.SessionRequest o-- com.example.srp.demosrpgamemanager.model.Player : player
+  com.example.srp.demosrpgamemanager.resource.SessionResponse o-- com.example.srp.demosrpgamemanager.model.Player : player
+
+
+    namespace om.example.srp.demosrpgamemanager {
       namespace webservice {
-        class com.example.srp.demoSRPGameManager.webservice.PlayerActionController {
-             + fire()
+        class com.example.srp.demosrpgamemanager.webservice.GameSessionController {
+            + login()
+            + signUp()
+        }
+      }
+    }
+
+
+
+
+    namespace om.example.srp.demosrpgamemanager {
+      namespace webservice {
+        class com.example.srp.demosrpgamemanager.webservice.PlayerActionController {
+            + fire()
             + move()
             + rest()
         }
@@ -190,10 +307,10 @@ title __DEMOSRPGAMEMANAGER's Class Diagram__\n
 
 
 
-    namespace om.example.srp.demoSRPGameManager {
+    namespace om.example.srp.demosrpgamemanager {
       namespace webservice {
-        class com.example.srp.demoSRPGameManager.webservice.PlayerController {
-           + getHighScore()
+        class com.example.srp.demosrpgamemanager.webservice.PlayerController {
+            + getHighScore()
             + getName()
         }
       }
@@ -201,17 +318,13 @@ title __DEMOSRPGAMEMANAGER's Class Diagram__\n
 
 
 
-  com.example.srp.demoSRPGameManager.model.Player o-- com.example.srp.demoSRPGameManager.model.ActionPlayer : actionPlayer
-  com.example.srp.demoSRPGameManager.model.Player o-- com.example.srp.demoSRPGameManager.model.SessionPlayer : sessionPlayer
-  com.example.srp.demoSRPGameManager.resource.ActionRequest o-- com.example.srp.demoSRPGameManager.model.Player : player
-  com.example.srp.demoSRPGameManager.resource.ActionResponse o-- com.example.srp.demoSRPGameManager.model.Player : player
-  com.example.srp.demoSRPGameManager.resource.PlayerRequest o-- com.example.srp.demoSRPGameManager.model.Player : player
-  com.example.srp.demoSRPGameManager.resource.SessionRequest o-- com.example.srp.demoSRPGameManager.model.Player : player
-  com.example.srp.demoSRPGameManager.resource.SessionResponse o-- com.example.srp.demoSRPGameManager.model.Player : player
-  com.example.srp.demoSRPGameManager.webservice.GameSessionController o-- com.example.srp.demoSRPGameManager.manager.GameSessionManager : gameSessionManager
-  com.example.srp.demoSRPGameManager.webservice.PlayerActionController o-- com.example.srp.demoSRPGameManager.manager.PlayerActionManager : playerActionManager
-  com.example.srp.demoSRPGameManager.webservice.PlayerController o-- com.example.srp.demoSRPGameManager.manager.PlayerManager : playerManager
-
+  com.example.srp.demosrpgamemanager.webservice.GameSessionController o-- com.example.srp.demosrpgamemanager.manager.session.LoginManager : loginManager
+  com.example.srp.demosrpgamemanager.webservice.GameSessionController o-- com.example.srp.demosrpgamemanager.manager.session.SignUpManager : signUpManager
+  com.example.srp.demosrpgamemanager.webservice.PlayerActionController o-- com.example.srp.demosrpgamemanager.manager.action.FireManager : fireManager
+  com.example.srp.demosrpgamemanager.webservice.PlayerActionController o-- com.example.srp.demosrpgamemanager.manager.action.MoveManager : moveManager
+  com.example.srp.demosrpgamemanager.webservice.PlayerActionController o-- com.example.srp.demosrpgamemanager.manager.action.RestManager : restManager
+  com.example.srp.demosrpgamemanager.webservice.PlayerController o-- com.example.srp.demosrpgamemanager.manager.player.NameManager : nameManager
+  com.example.srp.demosrpgamemanager.webservice.PlayerController o-- com.example.srp.demosrpgamemanager.manager.player.ScoreManager : scoreManager
 
 right footer
 
@@ -219,4 +332,5 @@ right footer
 PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
 For more information about this tool, please contact philippe.mesmeur@gmail.com
 endfooter
+
 @enduml

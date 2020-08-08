@@ -3,7 +3,7 @@
 title __CONFIG's Class Diagram__\n
 
   namespace  {
-    namespace om.example.srp.demoSRPGameManager {
+    namespace om.example.srp.demosrpgamemanager {
       namespace config {
         class com.example.srp.demosrpgamemanager.config.SwaggerConfigurator {
             + newsApi()

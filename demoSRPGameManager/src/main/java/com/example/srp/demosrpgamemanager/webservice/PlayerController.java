@@ -1,6 +1,7 @@
 package com.example.srp.demosrpgamemanager.webservice;
 
-import com.example.srp.demosrpgamemanager.manager.PlayerManager;
+import com.example.srp.demosrpgamemanager.manager.player.NameManager;
+import com.example.srp.demosrpgamemanager.manager.player.ScoreManager;
 import com.example.srp.demosrpgamemanager.model.Player;
 import com.example.srp.demosrpgamemanager.resource.PlayerResponse;
 import com.example.srp.demosrpgamemanager.resource.SessionResponse;
@@ -16,7 +17,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class PlayerController {
 
     @Autowired
-    private PlayerManager playerManager;
+    private ScoreManager scoreManager;
+
+    @Autowired
+    private NameManager nameManager;
 
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Successful response", response = SessionResponse.class)
@@ -24,7 +28,7 @@ public class PlayerController {
     @GetMapping(value = "/getHighScore/{playerId}", produces = MediaType.APPLICATION_JSON_VALUE)
     public PlayerResponse getHighScore(@PathVariable String playerId) {
         Player player = Player.builder().id(playerId).build();
-        return PlayerResponse.builder().highScore(playerManager.getHighScore(player)).build();
+        return PlayerResponse.builder().highScore(scoreManager.getHighScore(player)).build();
     }
 
     @ApiResponses(value = {
@@ -33,7 +37,7 @@ public class PlayerController {
     @GetMapping(value = "/getName/{playerId}", produces = MediaType.APPLICATION_JSON_VALUE)
     public PlayerResponse getName(@PathVariable String playerId) {
         Player player = Player.builder().id(playerId).build();
-        return PlayerResponse.builder().name(playerManager.getName(player)).build();
+        return PlayerResponse.builder().name(nameManager.getName(player)).build();
     }
 
 }

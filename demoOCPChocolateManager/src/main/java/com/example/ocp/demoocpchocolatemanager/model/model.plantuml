@@ -2,8 +2,8 @@
 
 title __MODEL's Class Diagram__\n
 
-  namespace  {
-    namespace om.example.ocp.demoOCPChocolateManager {
+
+    namespace om.example.ocp.demoocpchocolatemanager {
       namespace model {
         class com.example.ocp.demoocpchocolatemanager.model.Chocolate {
             - description : String
@@ -18,11 +18,11 @@ title __MODEL's Class Diagram__\n
         }
       }
     }
-  }
+
   
 
-  namespace  {
-    namespace om.example.ocp.demoOCPChocolateManager {
+
+    namespace om.example.ocp.demoocpchocolatemanager {
       namespace model {
         class com.example.ocp.demoocpchocolatemanager.model.Chocolate.ChocolateBuilder {
             - description : String
@@ -33,11 +33,11 @@ title __MODEL's Class Diagram__\n
         }
       }
     }
-  }
+
   
 
-  namespace  {
-    namespace om.example.ocp.demoOCPChocolateManager {
+
+    namespace om.example.ocp.demoocpchocolatemanager {
       namespace model {
         enum ChocolateCategory {
           BASIC
@@ -46,11 +46,11 @@ title __MODEL's Class Diagram__\n
         }
       }
     }
-  }
+
   
 
-  namespace  {
-    namespace om.example.ocp.demoOCPChocolateManager {
+
+    namespace om.example.ocp.demoocpchocolatemanager {
       namespace model {
         enum ChocolateSelection {
           COCOA_CHOCOLATE
@@ -60,7 +60,7 @@ title __MODEL's Class Diagram__\n
         }
       }
     }
-  }
+
   
 
   com.example.ocp.demoocpchocolatemanager.model.Chocolate +-down- com.example.ocp.demoocpchocolatemanager.model.Chocolate.ChocolateBuilder

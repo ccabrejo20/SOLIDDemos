@@ -3,7 +3,7 @@
 title __DEMOSRPGAMEMANAGER's Class Diagram__\n
 
   namespace  {
-    namespace om.example.srp.demoSRPGameManager {
+    namespace om.example.srp.demosrpgamemanager {
       class com.example.srp.demosrpgamemanager.DemoSRPGameManagerApplication {
           {static} + main()
       }

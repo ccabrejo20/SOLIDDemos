@@ -2,8 +2,8 @@
 
 title __MACHINE's Class Diagram__\n
 
-  namespace  {
-    namespace om.example.ocp.demoOCPChocolateManager {
+
+    namespace om.example.ocp.demoocpchocolatemanager {
       namespace machine {
         class com.example.ocp.demoocpchocolatemanager.machine.BasicChocolateMachine {
             + brewChocolate()
@@ -12,22 +12,22 @@ title __MACHINE's Class Diagram__\n
         }
       }
     }
-  }
+
   
 
-  namespace  {
-    namespace om.example.ocp.demoOCPChocolateManager {
+
+    namespace om.example.ocp.demoocpchocolatemanager {
       namespace machine {
         interface com.example.ocp.demoocpchocolatemanager.machine.ChocolateMachine {
             {abstract} + brewChocolate()
         }
       }
     }
-  }
+
   
 
-  namespace  {
-    namespace om.example.ocp.demoOCPChocolateManager {
+
+    namespace om.example.ocp.demoocpchocolatemanager {
       namespace machine {
         class com.example.ocp.demoocpchocolatemanager.machine.PremiumChocolateMachine {
             + brewChocolate()
@@ -36,7 +36,7 @@ title __MACHINE's Class Diagram__\n
         }
       }
     }
-  }
+
   
 
   com.example.ocp.demoocpchocolatemanager.machine.BasicChocolateMachine .up.|> com.example.ocp.demoocpchocolatemanager.machine.ChocolateMachine

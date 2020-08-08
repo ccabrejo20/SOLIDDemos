@@ -1,35 +1,12 @@
 @startuml
+
 title __DEMOOCPCHOCOLATEMANAGER's Class Diagram__\n
 
 
-    class MavenWrapperDownloader {
-    }
-
-
-
-
-    namespace om.example.ocp.demoOCPChocolateManager {
-      class com.example.ocp.demoOCPChocolateManager.DemoOCPChocolateManagerApplication {
-      }
-    }
-
-
-
-
-    namespace om.example.ocp.demoOCPChocolateManager {
-      namespace config {
-        class com.example.ocp.demoOCPChocolateManager.config.SwaggerConfigurator {
-        }
-      }
-    }
-
-
-
-
-    namespace om.example.ocp.demoOCPChocolateManager {
+    namespace om.example.ocp.demoocpchocolatemanager {
       namespace machine {
-        class com.example.ocp.demoOCPChocolateManager.machine.BasicChocolateMachine {
-		  + brewChocolate()
+        class com.example.ocp.demoocpchocolatemanager.machine.BasicChocolateMachine {
+            + brewChocolate()
             + brewMilkChocolate()
             + brewWhiteChocolate()
         }
@@ -39,10 +16,10 @@ title __DEMOOCPCHOCOLATEMANAGER's Class Diagram__\n
 
 
 
-    namespace om.example.ocp.demoOCPChocolateManager {
+    namespace om.example.ocp.demoocpchocolatemanager {
       namespace machine {
-        interface com.example.ocp.demoOCPChocolateManager.machine.ChocolateMachine {
-		{abstract} + brewChocolate()
+        interface com.example.ocp.demoocpchocolatemanager.machine.ChocolateMachine {
+            {abstract} + brewChocolate()
         }
       }
     }
@@ -50,10 +27,10 @@ title __DEMOOCPCHOCOLATEMANAGER's Class Diagram__\n
 
 
 
-    namespace om.example.ocp.demoOCPChocolateManager {
+    namespace om.example.ocp.demoocpchocolatemanager {
       namespace machine {
-        class com.example.ocp.demoOCPChocolateManager.machine.PremiumChocolateMachine {
-		+ brewChocolate()
+        class com.example.ocp.demoocpchocolatemanager.machine.PremiumChocolateMachine {
+            + brewChocolate()
             + brewCocoaChocolate()
             + brewDarkChocolate()
         }
@@ -62,27 +39,35 @@ title __DEMOOCPCHOCOLATEMANAGER's Class Diagram__\n
 
 
 
+  com.example.ocp.demoocpchocolatemanager.machine.BasicChocolateMachine .up.|> com.example.ocp.demoocpchocolatemanager.machine.ChocolateMachine
+  com.example.ocp.demoocpchocolatemanager.machine.PremiumChocolateMachine .up.|> com.example.ocp.demoocpchocolatemanager.machine.ChocolateMachine
 
-    namespace om.example.ocp.demoOCPChocolateManager {
+
+    namespace om.example.ocp.demoocpchocolatemanager {
       namespace manager {
-        class com.example.ocp.demoOCPChocolateManager.manager.ChocolateManager {
-		   {static} - SERVICE_NAME_SUFFIX : String
+        class com.example.ocp.demoocpchocolatemanager.manager.ChocolateManager {
+            {static} - SERVICE_NAME_SUFFIX : String
             - beanFactory : BeanFactory
             + brewChocolate()
-
         }
       }
     }
 
 
 
+  com.example.ocp.demoocpchocolatemanager.manager.ChocolateManager o-- com.example.ocp.demoocpchocolatemanager.machine.ChocolateMachine : chocolateMachine
 
-    namespace om.example.ocp.demoOCPChocolateManager {
+    namespace om.example.ocp.demoocpchocolatemanager {
       namespace model {
-        class com.example.ocp.demoOCPChocolateManager.model.Chocolate {
-		- description : String
-		+ getDescription()
-		+ setDescription()
+        class com.example.ocp.demoocpchocolatemanager.model.Chocolate {
+            - description : String
+            + Chocolate()
+            + equals()
+            + getDescription()
+            + hashCode()
+            + setDescription()
+            + toString()
+            # canEqual()
         }
       }
     }
@@ -90,11 +75,16 @@ title __DEMOOCPCHOCOLATEMANAGER's Class Diagram__\n
 
 
 
-    namespace om.example.ocp.demoOCPChocolateManager {
+
+
+
+
+    namespace om.example.ocp.demoocpchocolatemanager {
       namespace model {
         enum ChocolateCategory {
-		BASIC
+          BASIC
           PREMIUM
+          identifier
         }
       }
     }
@@ -102,10 +92,10 @@ title __DEMOOCPCHOCOLATEMANAGER's Class Diagram__\n
 
 
 
-    namespace om.example.ocp.demoOCPChocolateManager {
+    namespace om.example.ocp.demoocpchocolatemanager {
       namespace model {
         enum ChocolateSelection {
-		COCOA_CHOCOLATE
+          COCOA_CHOCOLATE
           DARK_CHOCOLATE
           MILK_CHOCOLATE
           WHITE_CHOCOLATE
@@ -114,11 +104,19 @@ title __DEMOOCPCHOCOLATEMANAGER's Class Diagram__\n
     }
 
 
-
-
-    namespace om.example.ocp.demoOCPChocolateManager {
+    namespace om.example.ocp.demoocpchocolatemanager {
       namespace resource {
-        class com.example.ocp.demoOCPChocolateManager.resource.ChocolateRequest {
+        class com.example.ocp.demoocpchocolatemanager.resource.ChocolateRequest {
+            + ChocolateRequest()
+            + ChocolateRequest()
+            + equals()
+            + getChocolateCategory()
+            + getChocolateSelection()
+            + hashCode()
+            + setChocolateCategory()
+            + setChocolateSelection()
+            + toString()
+            # canEqual()
         }
       }
     }
@@ -126,33 +124,37 @@ title __DEMOOCPCHOCOLATEMANAGER's Class Diagram__\n
 
 
 
-    namespace om.example.ocp.demoOCPChocolateManager {
+
+    namespace om.example.ocp.demoocpchocolatemanager {
       namespace resource {
-        class com.example.ocp.demoOCPChocolateManager.resource.ChocolateResponse {
+        class com.example.ocp.demoocpchocolatemanager.resource.ChocolateResponse {
+            + ChocolateResponse()
+            + equals()
+            + getChocolate()
+            + hashCode()
+            + setChocolate()
+            + toString()
+            # canEqual()
         }
       }
     }
 
 
 
-
-    namespace om.example.ocp.demoOCPChocolateManager {
+  com.example.ocp.demoocpchocolatemanager.resource.ChocolateRequest o-- com.example.ocp.demoocpchocolatemanager.model.ChocolateCategory : chocolateCategory
+  com.example.ocp.demoocpchocolatemanager.resource.ChocolateRequest o-- com.example.ocp.demoocpchocolatemanager.model.ChocolateSelection : chocolateSelection
+  com.example.ocp.demoocpchocolatemanager.resource.ChocolateResponse o-- com.example.ocp.demoocpchocolatemanager.model.Chocolate : chocolate
+    namespace om.example.ocp.demoocpchocolatemanager {
       namespace webservice {
-        class com.example.ocp.demoOCPChocolateManager.webservice.ChocolateController {
-		+ brewChocolate()
+        class com.example.ocp.demoocpchocolatemanager.webservice.ChocolateController {
+            + brewChocolate()
         }
       }
     }
 
 
 
-  com.example.ocp.demoOCPChocolateManager.machine.BasicChocolateMachine .up.|> com.example.ocp.demoOCPChocolateManager.machine.ChocolateMachine
-  com.example.ocp.demoOCPChocolateManager.machine.PremiumChocolateMachine .up.|> com.example.ocp.demoOCPChocolateManager.machine.ChocolateMachine
-  com.example.ocp.demoOCPChocolateManager.manager.ChocolateManager o-- com.example.ocp.demoOCPChocolateManager.machine.ChocolateMachine : chocolateMachine
-  com.example.ocp.demoOCPChocolateManager.resource.ChocolateRequest o-- com.example.ocp.demoOCPChocolateManager.model.ChocolateCategory : chocolateCategory
-  com.example.ocp.demoOCPChocolateManager.resource.ChocolateRequest o-- com.example.ocp.demoOCPChocolateManager.model.ChocolateSelection : chocolateSelection
-  com.example.ocp.demoOCPChocolateManager.resource.ChocolateResponse o-- com.example.ocp.demoOCPChocolateManager.model.Chocolate : chocolate
-  com.example.ocp.demoOCPChocolateManager.webservice.ChocolateController o-- com.example.ocp.demoOCPChocolateManager.manager.ChocolateManager : chocolateManager
+  com.example.ocp.demoocpchocolatemanager.webservice.ChocolateController o-- com.example.ocp.demoocpchocolatemanager.manager.ChocolateManager : chocolateManager
 
 
 right footer
@@ -161,4 +163,5 @@ right footer
 PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
 For more information about this tool, please contact philippe.mesmeur@gmail.com
 endfooter
+
 @enduml

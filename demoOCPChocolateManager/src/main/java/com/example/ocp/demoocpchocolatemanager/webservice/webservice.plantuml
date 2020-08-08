@@ -2,15 +2,15 @@
 
 title __WEBSERVICE's Class Diagram__\n
 
-  namespace  {
-    namespace om.example.ocp.demoOCPChocolateManager {
+
+    namespace om.example.ocp.demoocpchocolatemanager {
       namespace webservice {
         class com.example.ocp.demoocpchocolatemanager.webservice.ChocolateController {
             + brewChocolate()
         }
       }
     }
-  }
+
   
 
   com.example.ocp.demoocpchocolatemanager.webservice.ChocolateController o-- com.example.ocp.demoocpchocolatemanager.manager.ChocolateManager : chocolateManager

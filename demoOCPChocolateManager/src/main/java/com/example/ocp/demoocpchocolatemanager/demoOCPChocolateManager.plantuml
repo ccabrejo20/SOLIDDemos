@@ -3,7 +3,7 @@
 title __DEMOOCPCHOCOLATEMANAGER's Class Diagram__\n
 
   namespace  {
-    namespace om.example.ocp.demoOCPChocolateManager {
+    namespace om.example.ocp.demoocpchocolatemanager {
       class com.example.ocp.demoocpchocolatemanager.DemoOCPChocolateManagerApplication {
           {static} + main()
       }
